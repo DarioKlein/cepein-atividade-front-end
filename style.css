@@ -1,0 +1,137 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 62.5%;
+
+  --cor-fonte-subnav: #333333;
+  --cor-borda-subnav: #0000001e;
+
+  --cor-principal: #fff;
+  --cor-secundaria: ##e36c10;
+  --cor-terciaria: #103d63;
+
+  --cor-fonte-titulo: #ec7200;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  overflow-x: hidden;
+}
+
+header {
+  width: 100vw;
+  z-index: 10;
+}
+
+nav {
+  width: 100%;
+}
+
+.sub-nav {
+  width: 100%;
+  display: flex;
+  height: 4.4rem;
+  font-size: 1.36rem;
+  padding: 0 5rem;
+  background-color: var(--cor-principal);
+}
+
+.sub-nav > li,
+.main-nav-container-links > li {
+  list-style: none;
+}
+
+.sub-nav > li > a {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding: 0 1.2rem;
+}
+
+.sub-nav > li:nth-child(2) {
+  border-left: 0.1rem solid var(--cor-borda-subnav);
+}
+
+.sub-nav > li:last-child {
+  background-color: #ec7200;
+}
+
+.sub-nav > li:last-child > a {
+  color: #fff;
+}
+
+.sub-nav > li > a {
+  text-decoration: none;
+  color: var(--cor-fonte-subnav);
+}
+
+.main-nav {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 6rem;
+  font-size: 1.6rem;
+  padding: 0 5rem;
+  background-color: var(--cor-terciaria);
+}
+
+#logo {
+  width: 15.5rem;
+  height: 5.6rem;
+}
+
+.main-nav-container-links {
+  display: flex;
+}
+
+.main-nav-container-links > li > a {
+  text-decoration: none;
+  color: var(--cor-principal);
+  display: flex;
+  align-items: center;
+  font-weight: 500;
+  text-transform: uppercase;
+  height: 6rem;
+  padding: 0 1rem;
+  gap: 0.25rem;
+  transition: all 0.2s ease-in-out;
+}
+
+.main-nav-container-links > li > a:hover {
+  color: var(--cor-fonte-titulo);
+}
+
+.main-nav-container-links > li > a:hover > img {
+  color: var(--cor-fonte-titulo);
+}
+
+.main-nav-container-links > li > a > img {
+  width: 2rem;
+}
+
+#search {
+  width: 2rem;
+  font-weight: 900;
+  cursor: pointer;
+}
+
+main {
+  width: 100vw;
+}
+
+.container-main-img {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+  height: 65rem;
+}
+
+.container-main-img > img {
+  transform: scale(1.3);
+}
