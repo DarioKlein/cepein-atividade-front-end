@@ -15,6 +15,7 @@
   --cor-terciaria: #103d63;
 
   --cor-fonte-titulo: #ec7200;
+  --cor-fonte-background: #0b3455;
 }
 
 body {
@@ -25,10 +26,31 @@ body {
 header {
   width: 100vw;
   z-index: 10;
+  position: fixed;
+  transition: all 0.3s ease-in-out;
+}
+
+.header-scrolled {
+  animation: showSubNav 0.8s ease-in-out;
+}
+
+@keyframes showSubNav {
+  0% {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 nav {
   width: 100%;
+}
+
+.main-nav {
+  list-style: none;
 }
 
 .sub-nav {
@@ -38,6 +60,8 @@ nav {
   font-size: 1.36rem;
   padding: 0 5rem;
   background-color: var(--cor-principal);
+  transition: all 0.3s ease-in-out;
+  overflow: hidden;
 }
 
 .sub-nav > li,
@@ -78,11 +102,13 @@ nav {
   font-size: 1.6rem;
   padding: 0 5rem;
   background-color: var(--cor-terciaria);
+  transition: all 0.3s ease-in-out;
 }
 
 #logo {
   width: 15.5rem;
   height: 5.6rem;
+  transition: all 0.3s ease-in-out;
 }
 
 .main-nav-container-links {
@@ -99,7 +125,7 @@ nav {
   height: 6rem;
   padding: 0 1rem;
   gap: 0.25rem;
-  transition: all 0.2s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
 .main-nav-container-links > li > a:hover {
@@ -122,6 +148,7 @@ nav {
 
 main {
   width: 100vw;
+  padding-top: 10.4rem;
 }
 
 .container-main-img {
@@ -217,11 +244,16 @@ main {
   height: 18.5rem;
 }
 
-figure {
+.container-galery-image figure {
   position: relative;
 }
 
-figure > figcaption {
+.container-galery-image figure > figcaption a {
+  text-decoration: none;
+  color: var(--cor-principal);
+}
+
+.container-galery-image figure > figcaption {
   position: absolute;
   bottom: 0;
   left: 0;
@@ -238,10 +270,91 @@ figure > figcaption {
   line-height: 2.4rem;
 }
 
+.container-galery-image figure figcaption:hover a {
+  color: var(--cor-fonte-titulo);
+}
+
+.container-galery-image figure figcaption {
+  cursor: pointer;
+}
+
+.container-galery-image figure,
+.container-galery-image figure figcaption a {
+  transition: all 0.3s ease-in-out;
+}
+
+.container-galery-image figure:hover {
+  transform: translateY(-0.5rem);
+}
+
 section > figure:nth-child(1) > figcaption {
   font-size: 2.2rem;
 }
 
 .group-image > figure:nth-child(4) > figcaption {
   margin-bottom: 5.7rem;
+}
+
+.container-options {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 1.2rem;
+}
+
+.container-options > a > img {
+  width: 41.6rem;
+  height: 22rem;
+  transition: all 0.45s ease-in-out;
+}
+
+.container-options > a > img:hover {
+  transform: translateY(-0.5rem);
+}
+
+.container-events {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  margin: 4rem 0;
+  margin-bottom: 10rem;
+}
+
+.container-events > img {
+  width: 55rem;
+  height: 56rem;
+  object-fit: cover;
+}
+
+.container-events > div > h2 {
+  max-width: 63rem;
+  font-size: 5.6rem;
+  line-height: 5rem;
+  font-weight: 600;
+  padding: 3rem 2rem;
+  color: var(--cor-principal);
+  background-color: var(--cor-fonte-background);
+  font-family: 'Roboto', sans-serif;
+  position: relative;
+  margin-top: 4rem;
+  left: -8rem;
+}
+
+.container-events > div > button {
+  color: var(--cor-principal);
+  font-weight: bold;
+  background-color: var(--cor-fonte-background);
+  border: none;
+  padding: 1.6rem 2rem;
+  border-radius: 0.5rem;
+  margin-top: 5rem;
+  margin-left: 8rem;
+  font-size: 1.6rem;
+  font-family: 'Poppins', sans-serif;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.container-events > div > button:hover {
+  color: var(--cor-fonte-titulo);
 }
