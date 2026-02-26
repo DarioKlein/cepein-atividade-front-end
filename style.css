@@ -358,3 +358,59 @@ section > figure:nth-child(1) > figcaption {
 .container-events > div > button:hover {
   color: var(--cor-fonte-titulo);
 }
+
+.container-choose {
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--cor-fonte-background);
+  padding: 5rem;
+  padding-bottom: 6.5rem;
+  gap: 1rem;
+}
+
+.container-choose > h2 {
+  font-family: 'Roboto', sans-serif;
+  font-size: 5.6rem;
+  color: var(--cor-principal);
+}
+
+.container-choose > p {
+  font-family: 'Poppins', sans-serif;
+  font-size: 2rem;
+  color: var(--cor-principal);
+  text-align: center;
+  max-width: 72%;
+}
+
+.container-choose > div {
+  display: flex;
+  justify-content: center;
+  gap: 2.4rem;
+  margin-top: 2rem;
+}
+
+.container-choose > div > div {
+  border: 0.1rem solid var(--cor-principal);
+  max-width: 23%;
+  padding: 2rem;
+  padding-bottom: 7.5rem;
+  border-radius: 0.5rem;
+}
+
+.container-choose > div > div > h3 {
+  font-family: 'Roboto', sans-serif;
+  font-size: 2.5rem;
+  color: var(--cor-fonte-titulo);
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.container-choose > div > div > p {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.5rem;
+  color: var(--cor-principal);
+  text-align: center;
+  margin-top: 2rem;
+}
