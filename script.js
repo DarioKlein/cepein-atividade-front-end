@@ -1,12 +1,12 @@
-const header = document.querySelector('header');
+const header = document.querySelector('header')
 
 window.addEventListener('scroll', () => {
   if (window.scrollY > 100) {
-    header.classList.add('header-scrolled');
+    header.classList.add('header-scrolled')
   } else {
-    header.classList.remove('header-scrolled');
+    header.classList.remove('header-scrolled')
   }
-});
+})
 
 document.querySelectorAll('.main-nav-container-links > li > a').forEach(link => {
   const img = link.querySelector('img')
@@ -28,4 +28,16 @@ document.getElementById('search').addEventListener('mouseenter', () => {
 
 document.getElementById('search').addEventListener('mouseleave', () => {
   document.getElementById('search').src = './assets/icons/search.svg'
+})
+
+const dialog = document.getElementById('dialog')
+const openBtn = document.getElementById('openDialog')
+const closeBtn = document.getElementById('closeDialog')
+
+openBtn.addEventListener('click', () => {
+  dialog.showModal()
+})
+
+closeBtn.addEventListener('click', () => {
+  dialog.close()
 })
