@@ -19,6 +19,10 @@
   --cor-fonte-titulo2: #6c6969;
 }
 
+html {
+  scrollbar-gutter: stable;
+}
+
 body {
   font-family: 'Poppins', sans-serif;
   overflow-x: hidden;
@@ -36,11 +40,11 @@ header {
 }
 
 @keyframes showSubNav {
-  0% {
+  from {
     opacity: 0;
     transform: translateY(-100%);
   }
-  100% {
+  to {
     opacity: 1;
     transform: translateY(0);
   }
@@ -469,4 +473,41 @@ section > figure:nth-child(1) > figcaption {
   width: 100vw;
   height: 50rem;
   background-color: var(--cor-fonte-background);
+}
+
+@media (max-width: 1366px) {
+  .main-nav-container-links > li > a {
+    font-size: 85%;
+  }
+
+  .main-nav > li > img {
+    margin-top: 0.6rem;
+  }
+
+  .container-main-img > img {
+    transform: scale(1);
+    width: 100%;
+  }
+
+  .container-galery-image {
+    padding: 0 2rem;
+  }
+
+  .container-galery-image > figure {
+    width: 100%;
+  }
+
+  .group-image > figure {
+    width: 29.85rem;
+  }
+
+  .container-options {
+    justify-content: start;
+    padding: 0 2rem;
+    gap: 2.4rem;
+  }
+
+  .container-options > a > img {
+    width: 100%;
+  }
 }
