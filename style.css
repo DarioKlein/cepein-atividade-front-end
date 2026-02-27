@@ -565,9 +565,194 @@ dialog > div > button > img {
 }
 
 .container-carousel {
-  width: 100vw;
-  height: 50rem;
-  background-color: var(--cor-fonte-background);
+  background: url('https://live.staticflickr.com/65535/51062738131_9a6d93ffa3_k.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: bottom center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 12rem 21rem;
+  position: relative;
+  gap: 4rem;
+}
+
+.carousel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container-carousel::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(15, 61, 99, 0.85);
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
+
+.carousel > button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  background-color: var(--cor-fonte-titulo);
+  width: 2rem;
+  height: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  border-radius: 0.5rem;
+  position: relative;
+  z-index: 1;
+}
+
+.carousel > button:nth-child(1) {
+  left: 0.5rem;
+  z-index: 2;
+}
+
+.carousel > button:nth-child(3) {
+  right: 0.5rem;
+}
+
+.carousel > button > img {
+  width: 2.5rem;
+  height: 2.5rem;
+}
+
+.carousel > div {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.carousel > div > figure {
+  width: 33%;
+  position: relative;
+  border: 0.1rem solid var(--cor-principal);
+  z-index: 1;
+}
+
+.carousel > div > figure > img {
+  width: 100%;
+  filter: brightness(0.8);
+}
+
+.carousel > div > figure > figcaption {
+  position: absolute;
+  bottom: 0;
+  padding: 3rem 4rem;
+  z-index: 1;
+}
+
+.carousel > div > figure > figcaption > a {
+  text-decoration: none;
+  color: var(--cor-principal);
+}
+
+.carousel > div > figure::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 50%;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.87), transparent);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.carousel > div > figure > figcaption > a > h4 {
+  font-size: 2.2rem;
+}
+
+.carousel > div > figure > figcaption > a > p {
+  font-size: 1.5rem;
+}
+
+.container-carousel > div:nth-child(2) {
+  display: flex;
+  gap: 2rem;
+}
+
+.button-circle {
+  width: 1.5rem;
+  height: 1.5rem;
+  background-color: var(--cor-principal);
+  border-radius: 50%;
+  border: none;
+  position: relative;
+  z-index: 1;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+}
+
+.button-circle:nth-child(1) {
+  background-color: var(--cor-fonte-titulo2);
+}
+
+.button-circle:nth-child(2):hover {
+  background-color: var(--cor-fonte-titulo2);
+}
+
+.container-tour {
+  position: relative;
+}
+
+.container-tour > div {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #ec7200ce;
+  gap: 1rem;
+}
+
+.container-tour > div > h2 {
+  font-size: 4.8rem;
+  color: var(--cor-principal);
+  font-family: 'Roboto', sans-serif;
+}
+
+.container-tour > div > a {
+  background-color: #212529;
+  color: var(--cor-principal);
+  padding: 0.7rem 1.5rem;
+  font-size: 1.6rem;
+  text-decoration: none;
+  border-radius: 0.5rem;
+  transition: 0.2s ease-in-out;
+}
+
+.container-tour > div > a:hover {
+  background-color: #15171a;
+}
+
+.container-where-are {
+  padding-top: 4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+
+.container-where-are > h2 {
+  font-size: 4rem;
+  font-family: 'Roboto', sans-serif;
+  text-transform: uppercase;
+  margin-left: 18rem; 
+  width: 100%;
+  color: var(--cor-fonte-titulo2);
+}
+
+.container-where-are > iframe {
+  width: 100%;
+  height: 60rem;
 }
 
 @media (max-width: 1366px) {
