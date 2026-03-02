@@ -21,6 +21,7 @@
 
 html {
   scrollbar-gutter: stable;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -386,19 +387,19 @@ section > figure:nth-child(1) > figcaption {
   font-size: 2rem;
   color: var(--cor-principal);
   text-align: center;
-  max-width: 72%;
+  max-width: 74%;
 }
 
 .container-choose > div {
   display: flex;
-  justify-content: center;
   gap: 2.4rem;
   margin-top: 2rem;
+  padding: 0 24rem;
 }
 
 .container-choose > div > div {
   border: 0.1rem solid var(--cor-principal);
-  max-width: 23%;
+  width: 100%;
   padding: 2rem;
   padding-bottom: 7.5rem;
   border-radius: 0.5rem;
@@ -972,7 +973,7 @@ dialog > div > button > img {
   color: var(--cor-principal);
 }
 
-.sub-footer > button {
+.sub-footer > a {
   position: absolute;
   top: 50%;
   right: 5rem;
@@ -988,7 +989,7 @@ dialog > div > button > img {
   overflow: hidden;
 }
 
-.sub-footer > button:hover > img {
+.sub-footer > a:hover > img {
   animation: moveUp 1s ease-in-out;
 }
 
@@ -1004,7 +1005,7 @@ dialog > div > button > img {
   }
 }
 
-.sub-footer > button > img {
+.sub-footer > a > img {
   width: 2rem;
 }
 
@@ -1042,5 +1043,28 @@ dialog > div > button > img {
 
   .container-options > a > img {
     width: 100%;
+  }
+
+  .container-choose {
+    padding: 5rem 3rem;
+    padding-bottom: 6.5rem;
+  }
+
+  .container-choose > p {
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .container-choose > div {
+    padding: 0;
+  }
+
+  .container-history {
+    justify-content: start;
+    padding: 0 3rem;
+  }
+
+  .container-history > div:nth-child(1) {
+    max-width: 55%;
   }
 }
