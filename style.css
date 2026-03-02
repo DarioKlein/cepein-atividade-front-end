@@ -411,6 +411,10 @@ section > figure:nth-child(1) > figcaption {
   color: var(--cor-fonte-titulo);
   text-align: center;
   margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
 }
 
 .container-choose > div > div > p {
@@ -419,6 +423,11 @@ section > figure:nth-child(1) > figcaption {
   color: var(--cor-principal);
   text-align: center;
   margin-top: 2rem;
+}
+
+.img-choose {
+  width: 4rem;
+  height: 4rem;
 }
 
 .container-history {
